@@ -1,106 +1,385 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Learn Stock Market – Free Sessions</title>
-  <meta name="description" content="100% free stock market education. Learn chart reading, technical analysis, and risk management. No buy/sell tips. For learning purpose only.">
-  <link rel="canonical" href="https://example.com/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Community</title>
 
-  <!-- Performance -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Favicons (optional) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+<style>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Learn Stock Market – Free Sessions">
-  <meta property="og:description" content="Learn charts & risk management. No buy/sell tips. 100% educational.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://example.com/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=1600&auto=format&fit=crop">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-  <!-- Minimal CSS (inline for speed) -->
-  <style>
-    :root{
-      --bg1:#0c0c1d;
-      --bg2:#1a1a2b;
-      --brand: #66ffcc;
-      --brand-2:#00f0ff;
-      --text:#ffffff;
-      --muted:#b5b5c3;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:
-        linear-gradient(135deg, rgba(0,0,0,.45), rgba(0,0,0,.45)),
-        url('https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?q=80&w=1600&auto=format&fit=crop') no-repeat center/cover fixed;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-      min-height:100vh;
-    }
-    .container{
-      max-width:520px; margin:0 auto; padding:24px 18px; text-align:center; min-height:100vh; display:flex; flex-direction:column; justify-content:center;
-      backdrop-filter: saturate(130%);
-    }
-    .badge{display:inline-block; font-size:.78rem; padding:6px 10px; border:1px solid #2a2a3a; border-radius:999px; color:#d6eaff; background:rgba(0,240,255,.08); margin-bottom:14px}
-    h1{font-size:1.9rem; line-height:1.2; margin:6px 0 10px; background:linear-gradient(90deg,var(--brand-2),var(--brand)); -webkit-background-clip:text; background-clip:text; color:transparent;}
-    .sub{font-size:1rem; color:var(--muted); margin:0 auto 16px; max-width:36ch}
-    .pill{
-      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; background:rgba(0,255,153,.07); border:1px dashed rgba(0,255,153,.35); color:#d8ffe9; font-size:.9rem; margin:6px 0 18px;
-    }
-    ul.bullets{list-style:none; padding:0; margin:0 0 18px}
-    ul.bullets li{margin:8px 0; color:#e9eef9}
-    .cta{
-      display:inline-block; text-decoration:none; background:var(--brand); color:#041b14; padding:14px 18px; font-weight:700; border-radius:12px; box-shadow:0 0 0 0 rgba(0,255,153,.6); transform:translateZ(0);
-      transition:transform .15s ease;
-      animation:pulse 1.6s infinite;
-    }
-    .cta:active{transform:scale(.98)}
-    @keyframes pulse{
-      0%{box-shadow:0 0 0 0 rgba(0,255,153,.55)}
-      70%{box-shadow:0 0 0 20px rgba(0,255,153,0)}
-      100%{box-shadow:0 0 0 0 rgba(0,255,153,0)}
-    }
-    .fineprint{font-size:.86rem; color:var(--muted); margin:18px auto 0; max-width:44ch}
-    .disclaimer{font-size:.78rem; color:#9aa4b2; margin:18px auto 0; max-width:50ch}
-    .safe{display:flex; align-items:center; justify-content:center; gap:8px; margin-top:14px; color:#a1ffd6; font-size:.9rem}
-    .shield{width:18px; height:18px; display:inline-block; border-radius:4px; background:linear-gradient(135deg,#0df,#0f9)}
-    footer{opacity:.8; margin-top:22px; font-size:.78rem; color:#9aa4b2}
-  </style>
+body{
+background:#050d18;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+color:#fff;
+position:relative;
+}
+
+.bg{
+position:absolute;
+width:700px;
+height:700px;
+background:radial-gradient(circle,#00bfff20,transparent 70%);
+animation:spin 18s linear infinite;
+}
+
+@keyframes spin{
+100%{transform:rotate(360deg);}
+}
+
+.card{
+width:92%;
+max-width:420px;
+background:rgba(12,20,35,.92);
+backdrop-filter:blur(15px);
+border:1px solid rgba(0,191,255,.2);
+border-radius:28px;
+padding:20px;
+text-align:center;
+position:relative;
+z-index:5;
+box-shadow:0 0 40px rgba(0,191,255,.15);
+animation:floatCard 4s ease-in-out infinite;
+}
+
+@keyframes floatCard{
+50%{
+transform:translateY(-6px);
+}
+}
+
+.ticker-wrap{
+overflow:hidden;
+margin-bottom:15px;
+}
+
+.ticker{
+display:inline-flex;
+gap:20px;
+white-space:nowrap;
+animation:ticker 12s linear infinite;
+font-size:12px;
+font-weight:600;
+}
+
+@keyframes ticker{
+0%{
+transform:translateX(100%);
+}
+100%{
+transform:translateX(-100%);
+}
+}
+
+.live-dot{
+width:10px;
+height:10px;
+background:#ff3030;
+border-radius:50%;
+display:inline-block;
+box-shadow:0 0 15px #ff3030;
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+50%{
+opacity:.2;
+transform:scale(1.4);
+}
+}
+
+.red{
+color:#ff5d5d;
+animation:redGlow 2s infinite;
+}
+
+.green{
+color:#00ff99;
+animation:greenGlow 2s infinite;
+}
+
+@keyframes redGlow{
+50%{
+text-shadow:0 0 12px #ff5d5d;
+}
+}
+
+@keyframes greenGlow{
+50%{
+text-shadow:0 0 12px #00ff99;
+}
+}
+
+.profile{
+width:90px;
+height:90px;
+margin:auto;
+padding:3px;
+border-radius:50%;
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+box-shadow:0 0 30px #00bfff;
+animation:pulse 2s infinite;
+}
+
+.profile img{
+width:100%;
+height:100%;
+border-radius:50%;
+object-fit:cover;
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.06);
+}
+}
+
+.verify{
+position:absolute;
+margin-left:58px;
+margin-top:-28px;
+width:25px;
+height:25px;
+background:#00bfff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:12px;
+font-weight:bold;
+}
+
+h1{
+font-size:30px;
+margin-top:15px;
+font-weight:800;
+background:linear-gradient(90deg,#00d4ff,#008cff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.sub{
+font-size:12px;
+opacity:.8;
+margin-top:4px;
+}
+
+.members{
+margin-top:12px;
+font-size:18px;
+font-weight:700;
+}
+
+.info{
+font-size:13px;
+line-height:1.8;
+margin-top:12px;
+}
+
+.badges{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:8px;
+margin-top:14px;
+}
+
+.badge{
+padding:7px 12px;
+background:#10203a;
+border-radius:30px;
+font-size:11px;
+border:1px solid rgba(0,191,255,.25);
+}
+
+.join{
+display:block;
+margin-top:18px;
+padding:16px;
+border-radius:16px;
+text-decoration:none;
+font-size:18px;
+font-weight:700;
+color:#fff;
+background:linear-gradient(90deg,#008cff,#00c8ff);
+box-shadow:0 0 25px #00bfff;
+animation:btnGlow 1.8s infinite;
+}
+
+@keyframes btnGlow{
+50%{
+transform:scale(1.03);
+box-shadow:0 0 40px #00bfff;
+}
+}
+
+.features{
+margin-top:15px;
+}
+
+.feature{
+padding:10px;
+margin:8px 0;
+background:rgba(0,191,255,.06);
+border:1px solid rgba(0,191,255,.15);
+border-radius:12px;
+font-size:13px;
+}
+
+.popup{
+position:fixed;
+left:15px;
+bottom:15px;
+background:#0c1628;
+border:1px solid #00bfff;
+padding:12px 15px;
+border-radius:12px;
+font-size:12px;
+box-shadow:0 0 20px rgba(0,191,255,.3);
+z-index:999;
+animation:popupFloat 3s infinite;
+}
+
+@keyframes popupFloat{
+50%{
+transform:translateY(-6px);
+}
+}
+
+.dot{
+position:absolute;
+width:3px;
+height:3px;
+background:#00bfff;
+border-radius:50%;
+opacity:.7;
+animation:move linear infinite;
+}
+
+@keyframes move{
+from{
+transform:translateY(100vh);
+}
+to{
+transform:translateY(-100px);
+}
+}
+
+</style>
 </head>
+
 <body>
-  <main class="container">
-    <span class="badge">100% Educational • Policy Safe</span>
-    <h1>Learn Stock Market – Free Sessions</h1>
-    <p class="sub">No tips, just education for beginners</p>
 
-    <div class="pill">🚫 No Buy/Sell Tips • ✅ For Learning Purpose Only</div>
+<div class="bg"></div>
 
-    <ul class="bullets" aria-label="What you'll learn">
-      <li>• Chart basics & risk rules (no return promises)</li>
-      <li>• How to read trends without speculation</li>
-      <li>• Market discipline & common mistakes</li>
-    </ul>
+<div class="card">
 
-    <!-- CTA goes to a page-specific bridge -->
-    <a class="cta" href="bridge-lp97.html" rel="nofollow">Start Learning</a>
+<div class="ticker-wrap">
+<div class="ticker">
 
-    <div class="safe"><span class="shield" aria-hidden="true"></span> Ad Policy Friendly Content</div>
+<span><span class="live-dot"></span> LIVE</span>
+<span class="red">BTC ▼0.06%</span>
+<span class="red">NIFTY ▼0.48%</span>
+<span class="green">👀 <span id="viewers">1249</span></span>
 
-    <p class="fineprint">We focus on concepts & frameworks suitable for beginners.</p>
-    <p class="disclaimer"><em>This website is for educational purposes only. We do not provide investment, trading, or financial advice.</em></p>
+</div>
+</div>
 
-    <footer>© <span id="y"></span> Market Basics Learning Hub</footer>
-  </main>
+<div class="profile">
+<img src="Pankaj Photo.jpg</div>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+<div class="verify">✓</div>
+
+<h1>Pankaj Bhardwaj</h1>
+
+<div class="sub">
+OFFICIAL COMMUNITY
+</div>
+
+<div class="members">
+👥 10,584+ Members
+</div>
+
+<div class="info">
+📊 Daily Insights<br>
+🎓 Educational Content<br>
+⚡ Real-Time Updates
+</div>
+
+<div class="badges">
+<div class="badge">💎 PREMIUM</div>
+<div class="badge">📈 INSIGHTS</div>
+<div class="badge">⚡ DAILY</div>
+<div class="badge">🌎 GLOBAL</div>
+</div>
+
+<a href="https://t.me/+TONSxtldo-lkOTk1" class="join">
+🚀 JOIN FREE CHANNEL
+</a>
+
+<div class="features">
+<div class="feature">🔥 Active Community</div>
+<div class="feature">📊 Daily Updates</div>
+<div class="feature">⚡ Instant Notifications</div>
+</div>
+
+</div>
+
+<div class="popup" id="popup">
+🚀 Rahul joined just now
+</div>
+
+<script>
+
+for(let i=0;i<40;i++){
+let d=document.createElement('div');
+d.className='dot';
+d.style.left=Math.random()*100+'%';
+d.style.animationDuration=(8+Math.random()*8)+'s';
+document.body.appendChild(d);
+}
+
+const notifications=[
+"🚀 Rahul joined just now",
+"🔥 Aman unlocked access",
+"⭐ Priya joined from Delhi",
+"💎 Vikash became member",
+"🚀 Neha joined just now",
+"🔥 Arjun unlocked access",
+"⭐ Karan joined from Mumbai",
+"💎 Suresh became member"
+];
+
+let n=0;
+
+setInterval(()=>{
+document.getElementById('popup').innerHTML=notifications[n];
+n=(n+1)%notifications.length;
+},3000);
+
+setInterval(()=>{
+let v=document.getElementById("viewers");
+let count=parseInt(v.innerText);
+count += Math.floor(Math.random()*8)-3;
+if(count<1000) count=1000;
+v.innerText=count;
+},2500);
+
+</script>
+
 </body>
 </html>
+```
